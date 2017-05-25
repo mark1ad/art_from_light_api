@@ -6,10 +6,35 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do
+3.times do
   User.create(
     name: Faker::Name.name,
+    password: 'Mark',
     address: Faker::Address.city + ' ' + Faker::Address.state_abbr,
-    profile_url: Faker::LoremPixel.image("100x100")
+    profile_url: Faker::LoremPixel.image("175x100")
+  )
+end
+
+User.create(
+  name: "Mark",
+  password: 'Mark',
+  address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
+  profile_url: Faker::LoremPixel.image("200x250")
+)
+
+
+User.create(
+  name: Faker::Name.name,
+  password: 'Mark',
+  address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
+  profile_url: Faker::LoremPixel.image("200x200")
+)
+
+3.times do
+  User.create(
+    name: Faker::Name.name,
+    password: 'Mark',
+    address: Faker::Address.city + ' ' + Faker::Address.state_abbr,
+    profile_url: Faker::LoremPixel.image("175x100")
   )
 end
