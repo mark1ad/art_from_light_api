@@ -13,10 +13,11 @@ User.create(
   profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
 )
 
-3.times do
+7.times do
   Picture.create(
     title: Faker::Lorem.sentence,
     description: Faker::Lorem.sentence,
+    url: Faker::LoremPixel.image("200x200"),
     user_id: 1
   )
 end
