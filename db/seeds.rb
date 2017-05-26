@@ -19,7 +19,7 @@ User.create(
   name: "Mark",
   password: 'Mark',
   address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
-  profile_url: Faker::LoremPixel.image("200x250")
+  profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
 )
 
 
