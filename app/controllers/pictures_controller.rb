@@ -13,6 +13,13 @@ class PicturesController < ApplicationController
     render json: @picture
   end
 
+  # Get /pictures/users/1
+  def users
+    @pictures = Picture.where(user_id: params[:id])
+
+    render json: @pictures
+  end
+
   # POST /pictures
   def create
     @picture = Picture.new(picture_params)
