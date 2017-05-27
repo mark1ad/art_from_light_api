@@ -8,7 +8,8 @@
 
 User.create(
   name: "Mark",
-  password: 'Mark',
+  username: "Mark",
+  password: "Mark",
   address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
   profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
 )
@@ -54,6 +55,7 @@ end
 
 User.create(
   name: Faker::Name.name,
+  username: Faker::Name.name,
   password: 'Mark',
   address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
   profile_url: Faker::LoremPixel.image("200x200")
@@ -62,6 +64,7 @@ User.create(
 3.times do
   User.create(
     name: Faker::Name.name,
+    username: Faker::Name.name,
     password: 'Mark',
     address: Faker::Address.city + ' ' + Faker::Address.state_abbr,
     profile_url: Faker::LoremPixel.image("175x100")
