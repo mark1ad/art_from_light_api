@@ -13,6 +13,24 @@ User.create(
   profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
 )
 
+Collection.create(
+  title: 'Collection 1',
+  description: 'This is Collection 1',
+  user_id: 1
+)
+
+Collection.create(
+  title: 'Collection 2',
+  description: 'This is Collection 2',
+  user_id: 1
+)
+
+Collection.create(
+  title: 'Collection 3',
+  description: 'Not my collection',
+  user_id: 2
+)
+
 7.times do
   Picture.create(
     title: Faker::Lorem.sentence,

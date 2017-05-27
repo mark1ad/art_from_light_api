@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :collections do
+    collection do
+      get 'users/:id', to: 'collections#users'
+    end
+  end
   resources :pictures do
     collection do
       get 'users/:id', to: 'pictures#users'
@@ -8,9 +13,6 @@ Rails.application.routes.draw do
     collection do
       post '/login', to: 'users#login'
     end
-    # collection do
-    #   post ':id/pictures', to: 'users#pictures'
-    # end
   end
 
 
