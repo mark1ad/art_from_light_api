@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(
-  name: "Mark",
+  name: "Mark De May",
   username: "Mark",
   password: "Mark",
   address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
@@ -32,11 +32,20 @@ Collection.create(
   user_id: 2
 )
 
-7.times do
+4.times do
   Picture.create(
     title: Faker::Lorem.sentence,
     description: Faker::Lorem.sentence,
     url: Faker::LoremPixel.image("500x600"),
+    user_id: 1
+  )
+end
+
+3.times do
+  Picture.create(
+    title: Faker::Lorem.sentence,
+    description: Faker::Lorem.sentence,
+    url: Faker::LoremPixel.image("600x400"),
     user_id: 1
   )
 end
