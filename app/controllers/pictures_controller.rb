@@ -10,7 +10,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1
   def show
-    render json: @picture
+    render json: @picture.to_json(include: :user)
   end
 
   # Get /pictures/users/1

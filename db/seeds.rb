@@ -36,7 +36,7 @@ Collection.create(
   Picture.create(
     title: Faker::Lorem.sentence,
     description: Faker::Lorem.sentence,
-    url: Faker::LoremPixel.image("200x200"),
+    url: Faker::LoremPixel.image("500x600"),
     user_id: 1
   )
 end
