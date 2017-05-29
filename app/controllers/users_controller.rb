@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
   # GET /users
   def index
-    @users = User.all
+    @users = User.all.order('name')
 
     render json: @users
   end
