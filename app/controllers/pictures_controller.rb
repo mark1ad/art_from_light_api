@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
 
   # GET /pictures
   def index
-    @pictures = Picture.all
+    @pictures = Picture.all.order('title')
 
     render json: @pictures
   end
@@ -15,7 +15,7 @@ class PicturesController < ApplicationController
 
   # Get /pictures/users/1
   def users
-    @pictures = Picture.where(user_id: params[:id])
+    @pictures = Picture.where(user_id: params[:id]).order('title')
 
     render json: @pictures
   end
