@@ -17,18 +17,21 @@ User.create(
 Collection.create(
   title: 'Collection 1',
   description: 'This is Collection 1',
+  url: Faker::LoremPixel.image("200x200"),
   user_id: 1
 )
 
 Collection.create(
   title: 'Collection 2',
   description: 'This is Collection 2',
+  url: Faker::LoremPixel.image("400x500"),
   user_id: 1
 )
 
 Collection.create(
   title: 'Collection 3',
   description: 'Not my collection',
+  url: Faker::LoremPixel.image("200x200"),
   user_id: 2
 )
 
