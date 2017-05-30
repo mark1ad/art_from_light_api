@@ -1,5 +1,5 @@
 class CollectionsController < ApplicationController
-  before_action :set_collection, only: [:show, :update, :destroy]
+  before_action :set_collection, only: [:show, :update, :destroy, :pictures, :picture_add]
 
   # GET /collections
   def index
@@ -20,6 +20,12 @@ class CollectionsController < ApplicationController
     render json: @collections
   end
 
+  # GET /collections/1/pictures
+  # Get pictures in a collections
+  def pictures
+    render json: @collection.pictures
+  end
+
   # POST /collections
   def create
     @collection = Collection.new(collection_params)
@@ -29,6 +35,16 @@ class CollectionsController < ApplicationController
     else
       render json: @collection.errors, status: :unprocessable_entity
     end
+  end
+
+  # POST /collections/1/picture_add
+  # Add a picture to a collection
+  def picture_add
+    @picture = Picture.find(params["collection"][:picture_id])
+
+    @collection.pictures << @picture
+
+    render json: @collection
   end
 
   # PATCH/PUT /collections/1

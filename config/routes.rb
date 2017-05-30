@@ -3,6 +3,12 @@ Rails.application.routes.draw do
     collection do
       get 'users/:id', to: 'collections#users'
     end
+
+    member do
+      get :pictures
+      post :picture_add
+      post :picture_remove
+    end
   end
   resources :pictures do
     collection do

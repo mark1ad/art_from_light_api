@@ -44,6 +44,9 @@ Collection.create(
   )
 end
 
+Collection.find(1).pictures << Picture.find(1)
+Collection.find(1).pictures << Picture.find(2)
+
 3.times do
   Picture.create(
     title: Faker::Lorem.sentence,
