@@ -40,7 +40,7 @@ class CollectionsController < ApplicationController
   # POST /collections/1/picture_add
   # Add a picture to a collection
   def picture_add
-    @picture = Picture.find(params["collection"][:picture_id])
+    @picture = Picture.find(params[:picture_id])
 
     @collection.pictures << @picture
 
