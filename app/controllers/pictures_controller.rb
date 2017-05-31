@@ -1,5 +1,5 @@
 class PicturesController < ApplicationController
-  before_action :set_picture, only: [:show, :update, :destroy]
+  before_action :set_picture, only: [:show, :update, :destroy, :tags]
 
   # GET /pictures
   def index
@@ -18,6 +18,11 @@ class PicturesController < ApplicationController
     @pictures = Picture.where(user_id: params[:id]).order('title')
 
     render json: @pictures
+  end
+
+  # GET /pictures/1/tags
+  def tags
+    render json: @picture.tags
   end
 
   # POST /pictures

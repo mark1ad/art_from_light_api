@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Tag.create(name: "Nature")
+Tag.create(name: "Macro")
+Tag.create(name: "Still life")
+Tag.create(name: "B&W")
+Tag.create(name: "Flower")
+
 User.create(
   name: "Mark De May",
   username: "Mark",
@@ -41,12 +47,18 @@ Picture.create(
   url: Faker::LoremPixel.image("501x600"),
   user_id: 1
 )
+Picture.find(1).tags << Tag.find(1)
+Picture.find(1).tags << Tag.find(2)
+
 Picture.create(
   title: Faker::Lorem.sentence,
   description: Faker::Lorem.sentence,
   url: Faker::LoremPixel.image("502x600"),
   user_id: 1
 )
+Picture.find(2).tags << Tag.find(2)
+Picture.find(2).tags << Tag.find(3)
+
 Picture.create(
   title: Faker::Lorem.sentence,
   description: Faker::Lorem.sentence,
