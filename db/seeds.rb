@@ -10,7 +10,7 @@ User.create(
   name: "Mark De May",
   username: "Mark",
   password: "Mark",
-  address: Faker::Address.city + ', ' + Faker::Address.state_abbr,
+  address: "Fort Collins, CO",
   profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
 )
 
