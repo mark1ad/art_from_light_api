@@ -35,26 +35,56 @@ Collection.create(
   user_id: 2
 )
 
-4.times do
-  Picture.create(
-    title: Faker::Lorem.sentence,
-    description: Faker::Lorem.sentence,
-    url: Faker::LoremPixel.image("500x600"),
-    user_id: 1
-  )
-end
+Picture.create(
+  title: Faker::Lorem.sentence,
+  description: Faker::Lorem.sentence,
+  url: Faker::LoremPixel.image("501x600"),
+  user_id: 1
+)
+Picture.create(
+  title: Faker::Lorem.sentence,
+  description: Faker::Lorem.sentence,
+  url: Faker::LoremPixel.image("502x600"),
+  user_id: 1
+)
+Picture.create(
+  title: Faker::Lorem.sentence,
+  description: Faker::Lorem.sentence,
+  url: Faker::LoremPixel.image("503x600"),
+  user_id: 1
+)
+Picture.create(
+  title: Faker::Lorem.sentence,
+  description: Faker::Lorem.sentence,
+  url: Faker::LoremPixel.image("504x600"),
+  user_id: 1
+)
+Picture.create(
+  title: Faker::Lorem.sentence,
+  description: Faker::Lorem.sentence,
+  url: Faker::LoremPixel.image("505x600"),
+  user_id: 1
+)
+# 4.times do
+#   Picture.create(
+#     title: Faker::Lorem.sentence,
+#     description: Faker::Lorem.sentence,
+#     url: Faker::LoremPixel.image("500x600"),
+#     user_id: 1
+#   )
+# end
 
 Collection.find(1).pictures << Picture.find(1)
 Collection.find(1).pictures << Picture.find(2)
 
-3.times do
-  Picture.create(
-    title: Faker::Lorem.sentence,
-    description: Faker::Lorem.sentence,
-    url: Faker::LoremPixel.image("600x400"),
-    user_id: 1
-  )
-end
+# 3.times do
+#   Picture.create(
+#     title: Faker::Lorem.sentence,
+#     description: Faker::Lorem.sentence,
+#     url: Faker::LoremPixel.image("600x400"),
+#     user_id: 1
+#   )
+# end
 
 
 3.times do
@@ -66,6 +96,14 @@ end
   )
 end
 
+3.times do
+  Picture.create(
+    title: Faker::Lorem.sentence,
+    description: Faker::Lorem.sentence,
+    url: Faker::LoremPixel.image("600x400"),
+    user_id: 2
+  )
+end
 
 
 User.create(

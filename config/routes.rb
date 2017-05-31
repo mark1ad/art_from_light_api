@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
     member do
       get :pictures
+      get :pics_not_in
       post :picture_add
       post :picture_remove
     end

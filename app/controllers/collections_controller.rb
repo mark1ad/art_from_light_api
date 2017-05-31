@@ -1,5 +1,5 @@
 class CollectionsController < ApplicationController
-  before_action :set_collection, only: [:show, :update, :destroy, :pictures, :picture_add]
+  before_action :set_collection, only: [:show, :update, :destroy, :pictures, :picture_add, :pics_not_in]
 
   # GET /collections
   def index
@@ -24,6 +24,20 @@ class CollectionsController < ApplicationController
   # Get pictures in a collections
   def pictures
     render json: @collection.pictures
+  end
+
+  # GET /collections/1/pics_not_in
+  # Get user's pictures that are not in the collection
+  def pics_not_in
+    @allpics = Picture.where(user_id: @collection.user_id).order('title')
+    @usedpics = @collection.pictures
+    @showpics = []
+    @allpics.each do |pic|
+      if @usedpics.select { |x| x.id == pic.id }.length == 0
+        @showpics.push(pic)
+      end
+    end
+    render json: {pics: @showpics}
   end
 
   # POST /collections
