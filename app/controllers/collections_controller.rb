@@ -40,9 +40,12 @@ class CollectionsController < ApplicationController
   # POST /collections/1/picture_add
   # Add a picture to a collection
   def picture_add
-    @picture = Picture.find(params[:picture_id])
 
-    @collection.pictures << @picture
+    picIds = params[:picture_id].split(",")
+    picIds.each do |id|
+      @picture = Picture.find(id)
+      @collection.pictures << @picture
+    end
 
     render json: @collection
   end
