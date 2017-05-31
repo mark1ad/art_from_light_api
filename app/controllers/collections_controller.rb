@@ -1,5 +1,5 @@
 class CollectionsController < ApplicationController
-  before_action :set_collection, only: [:show, :update, :destroy, :pictures, :picture_add, :pics_not_in]
+  before_action :set_collection, only: [:show, :update, :destroy, :pictures, :picture_add, :pics_not_in, :picture_remove]
 
   # GET /collections
   def index
@@ -62,6 +62,13 @@ class CollectionsController < ApplicationController
     end
 
     render json: @collection
+  end
+
+  # POST /collections/1/picture_remove
+  # Removes a picture from a collections
+  def picture_remove
+    picture = Picture.find(params[:picture_id])
+    @collection.pictures.delete(picture)
   end
 
   # PATCH/PUT /collections/1
