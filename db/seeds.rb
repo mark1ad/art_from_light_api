@@ -60,15 +60,15 @@ Picture.find(2).tags << Tag.find(2)
 Picture.find(2).tags << Tag.find(3)
 
 Picture.create(
-  title: Faker::Lorem.sentence,
-  description: Faker::Lorem.sentence,
-  url: Faker::LoremPixel.image("503x600"),
+  title: "Rocket Man",
+  description: "Flaming road trip mobile.",
+  url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496351356/l798tcu29tgs11y7caj3.png",
   user_id: 1
 )
 Picture.create(
   title: Faker::Lorem.sentence,
   description: Faker::Lorem.sentence,
-  url: Faker::LoremPixel.image("504x600"),
+  url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1495833621/sample.jpg",
   user_id: 1
 )
 Picture.create(
