@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :tags
+  resources :tags do
+    member do
+      get :pictures
+    end
+  end
+
   resources :collections do
     collection do
       get 'users/:id', to: 'collections#users'

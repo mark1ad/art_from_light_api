@@ -5,7 +5,7 @@ class PicturesController < ApplicationController
   def index
     @pictures = Picture.all.order('title')
 
-    render json: @pictures
+    render json: @pictures.to_json(include: :user)
   end
 
   # GET /pictures/1
