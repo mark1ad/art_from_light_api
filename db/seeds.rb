@@ -23,7 +23,7 @@ def make_mark
     username: "Mark",
     password: "Mark",
     address: "Fort Collins, CO",
-    profile_url: 'http://i.imgur.com/GqF6FMvt.jpg'
+    profile_url: 'https://i.imgur.com/GqF6FMvt.jpg'
   )
   $user_id = $user_id + 1
 
@@ -38,7 +38,8 @@ def mark_collection_1
   Collection.create(
     title: 'Flowers',
     description: 'Nature in Bloom',
-    url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496434877/081008_3177_inaeyd.png',
+    url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496434877/final/081008_3177_inaeyd.png
+',
     user_id: $user_id
   )
   $collection_id  = $collection_id + 1
@@ -47,7 +48,7 @@ def mark_collection_1
   Picture.create(
     title: "Flower #4521",
     description: "Denver Botanic Gardens",
-    url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496434877/081008_3177_inaeyd.png',
+    url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496434877/final/081008_3177_inaeyd.png',
     user_id: $user_id
   )
   $picture_id = $picture_id + +1
@@ -57,7 +58,7 @@ def mark_collection_1
   Picture.create(
     title: "Flower #3",
     description: "University of Colorado Andrews Arboretum",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434742/080415_1351_gd2dvx.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434742/080415_1351_gd2dvx.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + +1
@@ -72,7 +73,7 @@ def mark_collection_2
   Collection.create(
     title: 'Nighthawks',
     description: 'The world after the sun has set',
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434834/090108_0098_12x18_print_e4enyj.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434834/090108_0098_12x18_print_e4enyj.png",
     user_id: 1
   )
   $collection_id = $collection_id + 1
@@ -81,7 +82,7 @@ def mark_collection_2
   Picture.create(
     title: "Pay your money, take your chance",
     description: "Elitch Gardens",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434808/081018_3290_bw_wbduee.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434808/081018_3290_bw_wbduee.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -91,7 +92,7 @@ def mark_collection_2
   Picture.create(
     title: "Bridge",
     description: "Confluence Park",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434834/090108_0098_12x18_print_e4enyj.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434834/090108_0098_12x18_print_e4enyj.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -107,7 +108,7 @@ def mark_other_pictures
   Picture.create(
     title: "Flower #337",
     description: "Studio",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434750/080502_1522_bkgcih.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434750/080502_1522_bkgcih.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -115,7 +116,7 @@ def mark_other_pictures
   Picture.create(
     title: "Rocket Man",
     description: "Flaming road trip mobile.",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496439621/IMG_1203_ajcffu.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496439621/IMG_1203_ajcffu.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -143,7 +144,7 @@ def mark_collection_3
   Collection.create(
     title: 'Time',
     description: '30-60 seconds of life',
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434873/091003_0906_i0ipbq.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434876/final/091015_1034_ptvcgo.png",
     user_id: $user_id
   )
   $collection_id = $collection_id + 1
@@ -151,7 +152,7 @@ def mark_collection_3
   Picture.create(
     title: "Fall",
     description: "Old Town, Fort Collins",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434873/091003_0906_i0ipbq.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434873/final/091003_0906_i0ipbq.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -160,7 +161,7 @@ def mark_collection_3
   Picture.create(
     title: "Rock #1",
     description: "Boulder Creek",
-    url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496434861/090821_0731_j2apfd.png",
+    url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496434861/090821_0731_j2apfd.png",
     user_id: $user_id
   )
   $picture_id = $picture_id + 1
@@ -175,7 +176,7 @@ def make_stan
     Collection.create(
       title: 'Light',
       description: '',
-      url: 'http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
+      url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
       user_id: $user_id
     )
     $collection_id = $collection_id + 1
@@ -184,7 +185,7 @@ def make_stan
     Picture.create(
       title: "Glass",
       description: "",
-      url: 'http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
+      url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
       user_id: 2
     )
     $picture_id = $picture_id + 1
@@ -194,7 +195,7 @@ def make_stan
     Picture.create(
       title: "Flow",
       description: "",
-      url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091202_1389_crop_paopbq.png",
+      url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091202_1389_crop_paopbq.png",
       user_id: 2
     )
     $picture_id = $picture_id + 1
@@ -208,7 +209,7 @@ def make_stan
     username: "Stan",
     password: "Stan",
     address: "Langley Falls, Virginia",
-    profile_url: 'http://res.cloudinary.com/di22i0ckg/image/upload/v1496434856/081018_3295_oqiqrr.png'
+    profile_url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496434856/081018_3295_oqiqrr.png'
   )
   $user_id = $user_id + 1
 
@@ -245,7 +246,7 @@ make_cyril
 #   Collection.create(
 #     title: 'Light',
 #     description: '',
-#     url: 'http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
+#     url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
 #     user_id: 1
 #   )
 #
@@ -253,7 +254,7 @@ make_cyril
 #   Picture.create(
 #     title: "Glass",
 #     description: "",
-#     url: 'http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
+#     url: 'https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091118_1263_tw22ka.png',
 #     user_id: 1
 #   )
 #   Collection.find(4).pictures << Picture.find(11)
@@ -262,7 +263,7 @@ make_cyril
 #   Picture.create(
 #     title: "Flow",
 #     description: "",
-#     url: "http://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091202_1389_crop_paopbq.png",
+#     url: "https://res.cloudinary.com/di22i0ckg/image/upload/v1496603954/091202_1389_crop_paopbq.png",
 #     user_id: 1
 #   )
 #   Collection.find(4).pictures << Picture.find(12)
